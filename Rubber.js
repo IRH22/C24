@@ -2,9 +2,9 @@ class Rubber{
 	constructor(x,y,r){
 	// assign options to the rubber ball
 	var options={
-		'retitution': 1.3,
-		'friction': 5,
-		'densiti': 1
+		retitution: 1.3,
+		friction: 5,
+		densiti: 1
 		}
 		this.x=x;
 		this.y=y;
@@ -22,8 +22,9 @@ class Rubber{
 			strokeWeight(4);
 			stroke("black");
 			fill("darkblue");
+			ellipseMode(CENTER);
 			//draw the ellipse here to display the rubber ball
-			ellipse( this.x, this.y, this.r);
+			ellipse( this.body.position.x , this.body.position.y , this.r);
 
 			pop()
 	}
